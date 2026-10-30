@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Poppins', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Patua One', cursive, serif;
+  --font-inter: 'Inter', sans-serif;
+
+  --color-icc-dark: #060D24;
+  --color-icc-card: #141A32;
+  --color-icc-surface: #181E36;
+  --color-icc-border: #232B47;
+  --color-icc-mint: #4EDEA3;
+  --color-icc-mint-hover: #3fc790;
+  --color-icc-gold: #FFCE31;
+  --color-icc-red: #ED4C5C;
+  --color-icc-muted: #8E98B0;
+  --color-icc-light: #E2E8F0;
+}
+
+@layer base {
+  body {
+    background-color: #060D24;
+    color: #FFFFFF;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-sans);
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Subtle glowing aura helper classes */
+.radial-mint-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(78, 222, 163, 0.15) 0%, rgba(6, 13, 36, 0) 70%);
+}
+
+.radial-gold-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(255, 206, 49, 0.12) 0%, rgba(6, 13, 36, 0) 70%);
+}
+
+.glass-card {
+  background: rgba(20, 26, 50, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card:hover {
+  border-color: rgba(78, 222, 163, 0.3);
+}
